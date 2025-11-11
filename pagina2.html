@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Denuncie</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    
+    <nav class="navbar-fixed">
+        <div class="nav-container">
+            <span class="logo">Denúncia Anônima</span>
+            <div class="navbar-links">
+                <ul>
+                    <li><a href="index.html">Voltar à Página Principal</a></li>
+                </ul>        
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+
+        <section class="content-block" id="denuncia">
+            <div class="text-content">
+                <h2>Formulário de Denúncia Anônima</h2>
+                <p>Se você deseja denunciar práticas ilegais ou inadequadas em indústrias frigoríficas, por favor, preencha o formulário abaixo. Sua identidade será mantida em sigilo.</p>
+            </div>
+
+
+            <div class="form-content">
+                <iframe id="iframe" src="https://docs.google.com/forms/d/e/1FAIpQLSezMPSUK63rotoHMXWsQ309O-diYAiLyE1SzOwj1gQ6R6ELBQ/viewform?embedded=true" width="600" height="800" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
+            </div>
+        </section>
+
+        <script>
+            function adjustIframeWidth() {
+                const iframe = document.getElementById('iframe');
+                if (window.innerWidth < 650) {
+                    iframe.width = '350px';
+                    iframe.height = '900px'
+                } else {
+                    iframe.width = '600px';
+                    iframe.height = '700px';
+                }
+            }
+
+            window.addEventListener('load', adjustIframeWidth);
+            window.addEventListener('resize', adjustIframeWidth);
+        </script>
+    
+    </main>
+</body>
+</html>
