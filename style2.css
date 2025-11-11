@@ -322,25 +322,31 @@ footer {
 
 .navbar-fixed ul {
     list-style: none;
+}
+
+.navbar-links{
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .navbar-fixed ul li {
     margin-left: 20px;
 }
 
-.navbar-fixed ul li a {
+.navbar-links ul li a {
     text-decoration: none;
     color: #343a40;
     font-weight: 600;
-    font-size: 0.95rem;
-    padding: 8px 15px;
+    font-size: 1.2rem;
+    padding: 8px 16px;
     border-radius: 10px;
     transition: all 0.3s ease;
+    background-color: #e2e2e2;
 }
 
 /* Efeito de Link Ativo/Hover (Pressionado) */
-.navbar-fixed ul li a:hover {
+.navbar-links ul li a:hover {
     color: var(--verde);
     /* Neumorfismo: aparência de elemento pressionado */
     box-shadow: 
@@ -357,14 +363,107 @@ footer {
     .logo {
         margin-bottom: 10px;
     }
-    .navbar-fixed ul li {
+    .navbar-links ul li {
         margin: 0 0px;
     }
-    .navbar-fixed ul li a {
+    .navbar-links ul li a {
         padding: 5px 8px;
-        font-size: 0.85rem;
+        font-size: 0.9rem;
         display: flex;  
         justify-content: center;
         align-items: center;
     }
+}
+
+
+#menu__toggle {
+  opacity: 0;
+}
+#menu__toggle:checked + .menu__btn > span {
+  transform: rotate(45deg);
+}
+#menu__toggle:checked + .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0deg);
+}
+#menu__toggle:checked + .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__box {
+  left: 0 !important;
+}
+
+.menu__btn {
+  position: fixed;
+  top: 30px;
+  left: 30px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 1;
+}
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #616161;
+  transition-duration: .25s;
+}
+.menu__btn > span::before {
+  content: '';
+  top: -8px;
+}
+.menu__btn > span::after {
+  content: '';
+  top: 8px;
+}
+.menu__box {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 250px;
+  height: 100%;
+  margin: 0;
+  padding: 100px 0;
+  list-style: none;
+  background-color: #ECEFF1;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+  transition-duration: .25s;
+}
+.menu__item {
+  display: block;
+  padding: 12px 24px;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  transition-duration: .25s;
+}
+.menu__item:hover {
+  background-color: #CFD8DC;
+}
+
+    .hamburger-menu input{
+        position: fixed;
+        top: 65px;
+        left: 30px;
+    }
+
+@media (max-width: 768px) {
+
+    .menu__btn{
+        top: 70px;
+        left: 30px;
+    }
+
+    .menu__item{
+        font-size: 1rem;
+    }
+
 }
