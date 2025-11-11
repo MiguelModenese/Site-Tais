@@ -271,6 +271,7 @@ footer {
         gap: 2rem;
         padding: 2rem;
         justify-content: center;
+        text-align: center;
     }
     
     .content-block .image-content {
@@ -287,8 +288,9 @@ footer {
     }
 
     .container {
+        max-width: fit-content;
         margin: 2rem auto;
-        padding: 0 1rem;
+        padding: 0 0.5rem;
     }
 }
 
