@@ -1,0 +1,359 @@
+/* --- Configurações Globais (Reset) --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Paleta de Cores:
+   - Fundo Base: #f0f0f3 (Cinza Claro/Neumórfico)
+   - Primário (Texto/Corpo): #343a40 (Cinza Escuro)
+   - Secundário (Destaque): #007bff (Azul Elétrico)
+   - Sombra Clara: #ffffff
+   - Sombra Escura: #c8c8cd
+*/
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f0f0f3; 
+    color: #343a40; 
+    line-height: 1.6;
+    overflow-x: hidden;
+    padding-top: 50px; /* Espaço para o menu de navegação fixo, se você for adicionar um */
+}
+
+/* --- Header (Herói) - Limpo e Focado --- */
+.hero {
+    position: relative;
+    height: 40vh; /* Mais baixo para focar no conteúdo */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    background-color: #007bff; /* Fundo azul vibrante para o Hero */
+    
+    /* Borda sutil de card flutuante */
+    border-radius: 20px;
+    margin: 0 5% 4rem; 
+    box-shadow: 
+        10px 10px 20px #c8c8cd, /* Sombra escura (bottom-right) */
+        -10px -10px 20px #ffffff; /* Sombra clara (top-left) */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 1.5rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #e9ecef;
+}
+
+/* --- Container Principal (Espaço central) --- */
+.container {
+    max-width: 1000px;
+    margin: 4rem auto; 
+    padding: 0 1.5rem;
+}
+
+/* --- Estilo das Seções de Conteúdo (Cards Neumórficos) --- */
+section {
+    padding: 4rem 0;
+    margin-bottom: 3rem;
+    background: none;
+    box-shadow: none;
+    position: relative;
+}
+
+/* Título Centralizado */
+section h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    text-align: center;
+    color: #007bff; /* Título Azul Destaque */
+    text-transform: uppercase;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e9ecef; 
+}
+
+/* --- Layout dos Blocos de Conteúdo (Grid Neumórfico) --- */
+.content-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 3rem; 
+    align-items: center;
+    padding: 2.5rem;
+    background-color: #f0f0f3;
+    border-radius: 20px;
+    
+    /* Neumorfismo: aparência de elemento levantado */
+    box-shadow: 
+        9px 9px 16px #c8c8cd, 
+        -9px -9px 16px #ffffff;
+}
+
+.content-block.reverse {
+    grid-template-columns: 1fr 1fr; 
+}
+
+/* Corpo do Texto */
+.text-content p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: #495057;
+}
+
+/* Subtítulos (H3) */
+.content-block h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #007bff;
+    text-transform: uppercase;
+    border-left: 3px solid #007bff;
+    padding-left: 10px;
+}
+
+/* Estilizando a lista (com ícone) */
+.content-block ul {
+    list-style-type: none; 
+    padding-left: 0;
+}
+
+.content-block ul li {
+    font-size: 0.95rem;
+    color: #343a40;
+    margin-bottom: 0.5rem;
+    padding-left: 20px;
+    position: relative;
+}
+
+.content-block ul li::before {
+    content: '•'; 
+    color: #007bff;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
+    top: -2px;
+}
+
+/* Estilo das Imagens (Embutidas no Neumorfismo) */
+.image-content {
+    align-self: center; 
+    position: relative;
+    padding: 10px; /* Padding para o efeito de "pressionado" */
+    background-color: #f0f0f3;
+    border-radius: 15px;
+
+    /* Neumorfismo: aparência de elemento pressionado */
+    box-shadow: 
+        inset 5px 5px 10px #c8c8cd, 
+        inset -5px -5px 10px #ffffff;
+}
+
+.image-content img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    opacity: 1; 
+    display: block;
+}
+
+
+/* --- Seção de Notícias - Grid Flutuante --- */
+#noticias {
+    background: none;
+    padding: 4rem 1.5rem;
+    margin-bottom: 0;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.news-card {
+    background-color: #f0f0f3;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    /* Neumorfismo - Card Levantado */
+    box-shadow: 
+        8px 8px 15px #c8c8cd, 
+        -8px -8px 15px #ffffff;
+}
+
+.news-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 
+        12px 12px 25px #c8c8cd, 
+        -12px -12px 25px #ffffff;
+}
+
+.news-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 5px solid #007bff;
+}
+
+.news-content {
+    padding: 1.5rem;
+}
+
+.news-content h3 {
+    font-size: 1.2rem;
+    color: #007bff;
+    margin-bottom: 0.8rem;
+}
+
+.news-content p {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+/* --- Rodapé --- */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #e9ecef; /* Cinza claro para o rodapé */
+    color: #6c757d;
+    font-size: 0.85rem;
+    border-top: 1px solid #dee2e6;
+}
+
+/* --- Responsividade (Ajustes para Mobile) --- */
+@media (max-width: 992px) {
+    .hero {
+        margin: 0 2% 3rem;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    .content-block,
+    .content-block.reverse {
+        grid-template-columns: 1fr; 
+        gap: 2rem;
+        padding: 2rem;
+    }
+    
+    .content-block .image-content {
+        order: -1; 
+        padding: 5px; /* Ajuste para mobile */
+    }
+
+    .image-content img {
+        height: 250px;
+    }
+    
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+/* --- Barra de Navegação Fixa (Neumórfica) --- */
+.navbar-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f0f0f3;
+    z-index: 1000;
+    padding: 10px 0;
+    
+    /* Neumorfismo: aparência de elemento levantado no topo */
+    box-shadow: 
+        0 5px 10px rgba(0, 0, 0, 0.1),
+        0 2px 4px rgba(255, 255, 255, 0.8) inset;
+}
+
+.nav-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #007bff;
+    letter-spacing: 1px;
+}
+
+.navbar-fixed ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar-fixed ul li {
+    margin-left: 20px;
+}
+
+.navbar-fixed ul li a {
+    text-decoration: none;
+    color: #343a40;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 8px 15px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+/* Efeito de Link Ativo/Hover (Pressionado) */
+.navbar-fixed ul li a:hover {
+    color: #007bff;
+    /* Neumorfismo: aparência de elemento pressionado */
+    box-shadow: 
+        inset 3px 3px 6px #c8c8cd, 
+        inset -3px -3px 6px #ffffff;
+}
+
+/* Ajuste de responsividade para a navbar */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .logo {
+        margin-bottom: 10px;
+    }
+    .navbar-fixed ul li {
+        margin: 0 10px;
+    }
+    .navbar-fixed ul li a {
+        padding: 5px 8px;
+        font-size: 0.85rem;
+    }
+}
