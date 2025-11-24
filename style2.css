@@ -22,7 +22,7 @@
 
 body {
     font-family: 'Open Sans', sans-serif;
-    background-color: #f0f0f3; 
+    background-color: #a8f8ae; 
     color: #343a40; 
     line-height: 1.6;
     overflow-x: hidden;
@@ -489,3 +489,4 @@ footer {
         inset 5px 5px 10px #c8c8cd, 
         inset -5px -5px 10px #ffffff;
 }
+
